@@ -1,7 +1,7 @@
 var App = function() {
     var _gui, _guiFields;
     var _engine;
-    var _currPreset = Utils.getParameterByName("shape") || "galaxy"; // initial preset
+    var _currPreset = Utils.getParameterByName("shape") || "petals"; // initial preset
     var _currSimMode;
     var _uvAnim;
     var _tourMode = false;
@@ -17,46 +17,46 @@ var App = function() {
     };
 
     var _simModes = [
-        "SIM_PLANE",
-        "SIM_CUBE",
-        "SIM_DISC",
-        "SIM_SPHERE",
-        "SIM_BALL",
-        "SIM_ROSE_GALAXY",
-        "SIM_GALAXY",
-        "SIM_NOISE",
-        "SIM_TEXTURE"
+        // "SIM_PLANE",
+        // "SIM_CUBE",
+        // "SIM_DISC",
+        // "SIM_SPHERE",
+        // "SIM_BALL",
+        "SIM_ROSE_GALAXY"
+        // "SIM_GALAXY",
+        // "SIM_NOISE",
+        // "SIM_TEXTURE"
     ];
 
     // must have same name as preset, for async loading to work properly
     var _meshes = {
-        bear:      { scale:0.023, yOffset:-2.30, speed:0.05, url:"models/bear.json" },
-        bison:     { scale:0.020, yOffset:-2.00, speed:0.10, url:"models/bison.json" },
+        // bear:      { scale:0.023, yOffset:-2.30, speed:0.05, url:"models/bear.json" },
+        // bison:     { scale:0.020, yOffset:-2.00, speed:0.10, url:"models/bison.json" },
         // deer:      { scale:0.040, yOffset:-2.00, speed:0.10, url:"models/deer.json" },
         // dog:       { scale:0.040, yOffset:-1.65, speed:0.10, url:"models/retriever.json" },
         // fox:       { scale:0.070, yOffset:-1.50, speed:0.10, url:"models/fox.json" },
-        horse:     { scale:0.022, yOffset:-2.30, speed:0.08, url:"models/horse.json" },
-        panther:   { scale:0.030, yOffset:-1.70, speed:0.10, url:"models/panther.json" },
+        // horse:     { scale:0.022, yOffset:-2.30, speed:0.08, url:"models/horse.json" },
+        // panther:   { scale:0.030, yOffset:-1.70, speed:0.10, url:"models/panther.json" },
         // rabbit:    { scale:0.040, yOffset:-1.00, speed:0.05, url:"models/rabbit.json" },
-        wolf:      { scale:0.040, yOffset:-1.70, speed:0.10, url:"models/wolf.json" },
+        // wolf:      { scale:0.040, yOffset:-1.70, speed:0.10, url:"models/wolf.json" },
     };
 
     var _presets = {
-        "none":    { "user gravity":3, "shape gravity":1, _shape:"" },
+        // "none":    { "user gravity":3, "shape gravity":1, _shape:"" },
         // "noise":   { "user gravity":3, "shape gravity":1, _shape:"SIM_NOISE" },
-        "plane":   { "user gravity":4, "shape gravity":3, _shape:"SIM_PLANE" },
-        "sphere":  { "user gravity":4, "shape gravity":3, _shape:"SIM_SPHERE" },
-        "galaxy":  { "user gravity":3, "shape gravity":1, _shape:"SIM_GALAXY" },
-        "petals":  { "user gravity":3, "shape gravity":2, _shape:"SIM_ROSE_GALAXY" },
-        "bear":    { "user gravity":3, "shape gravity":5, _shape:_meshes.bear },
-        "bison":   { "user gravity":3, "shape gravity":5, _shape:_meshes.bison },
+        // "plane":   { "user gravity":4, "shape gravity":3, _shape:"SIM_PLANE" },
+        // "sphere":  { "user gravity":4, "shape gravity":3, _shape:"SIM_SPHERE" },
+        // "galaxy":  { "user gravity":3, "shape gravity":1, _shape:"SIM_GALAXY" },
+        "petals":  { "user gravity":3, "shape gravity":2, _shape:"SIM_ROSE_GALAXY" }
+        // "bear":    { "user gravity":3, "shape gravity":5, _shape:_meshes.bear },
+        // "bison":   { "user gravity":3, "shape gravity":5, _shape:_meshes.bison },
         // "deer":    { "user gravity":3, "shape gravity":5, _shape:_meshes.deer },
         // "dog":     { "user gravity":3, "shape gravity":5, _shape:_meshes.dog },
         // "fox":     { "user gravity":3, "shape gravity":5, _shape:_meshes.fox },
-        "horse":   { "user gravity":3, "shape gravity":5, _shape:_meshes.horse },
-        "panther": { "user gravity":3, "shape gravity":5, _shape:_meshes.panther },
+        // "horse":   { "user gravity":3, "shape gravity":5, _shape:_meshes.horse },
+        // "panther": { "user gravity":3, "shape gravity":5, _shape:_meshes.panther },
         // "rabbit":  { "user gravity":3, "shape gravity":5, _shape:_meshes.rabbit },
-        "wolf":    { "user gravity":3, "shape gravity":5, _shape:_meshes.wolf },
+        // "wolf":    { "user gravity":3, "shape gravity":5, _shape:_meshes.wolf },
     };
 
 
@@ -85,10 +85,10 @@ var App = function() {
             _setSimMode(preset._shape);
             _uvAnim.setMesh();  // set no mesh
         }
-        else {
-            _setSimMode("SIM_TEXTURE");
-            _uvAnim.setMesh(preset._shape.mesh);
-        }
+        // else {
+        //     _setSimMode("SIM_TEXTURE");
+        //     _uvAnim.setMesh(preset._shape.mesh);
+        // }
 
         _guiFields["user gravity"]  = _params.simMat.uniforms.uInputAccel.value = preset["user gravity"];
         _guiFields["shape gravity"] = _params.simMat.uniforms.uShapeAccel.value = preset["shape gravity"];
@@ -115,7 +115,7 @@ var App = function() {
     var _update = _params.update = function(dt,t) {
         _params.drawMat.uniforms.uTime.value = t;  // for ParticleShader.vs
         _uvAnim.update(dt,t);
-        if(_tourMode) _tourUpdate(dt,t);
+        // if(_tourMode) _tourUpdate(dt,t);
     };
 
     var _tourUpdate = (function() {
@@ -275,7 +275,7 @@ var App = function() {
 
     };
 
-    var _loadMeshes = function() {
+    /* var _loadMeshes = function() {
         var loader = new THREE.JSONLoader(true);
         Object.keys(_meshes).forEach(function(k) {
             loader.load(_meshes[k].url, function(geometry) {
@@ -291,13 +291,13 @@ var App = function() {
                     _uvAnim.setMesh(mesh);
             });
         });
-    };
+    };*/
 
 
 
     // RUN PROGRAM
 
-    _loadMeshes();
+    // _loadMeshes();
     _init();
     _initUI();
     _initKeyboard();

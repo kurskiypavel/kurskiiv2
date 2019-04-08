@@ -64,6 +64,8 @@ body {
   opacity: 0.0;
 }
 
+/*styles for preloader screen*/
+
 .gradient-bg-cyan-black {
   /* IE10 Consumer Preview */
   background-image: -ms-linear-gradient(top, #005C7A 0%, #000000 100%);
