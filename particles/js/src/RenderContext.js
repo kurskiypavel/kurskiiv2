@@ -24,6 +24,7 @@ var RenderContext = function(canvas) {
 
     var _rendererParams = {
         canvas: _canvas,
+        //changes transparancy - true
         alpha: false,
         depth: true,
         stencil: false,
@@ -43,7 +44,7 @@ var RenderContext = function(canvas) {
 
     var _cameraParams = {
         fov: 45,
-        near: 1,
+        near: 4,
         far: 1000
     };
 
