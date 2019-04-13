@@ -1,5 +1,5 @@
 
-var helpBox = document.getElementById("help-box");
+/*var helpBox = document.getElementById("help-box");
 
 var showHelpBox = function(show) {
     if (show) {
@@ -14,7 +14,7 @@ var showHelpBox = function(show) {
 if (!localStorage["iamnop.particles.helpShown"]) {
     helpBox.classList.remove("hidden");
     localStorage["iamnop.particles.helpShown"] = true;
-}
+}*/
 
 // start app
 var app = new App();

@@ -1,0 +1,92 @@
+// sass --watch scss/style.scss css/style.css --style compressed
+@import 'partials/colors';
+
+@font-face {
+    font-family: PopBold;
+    src: url("../vendor/fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: PopMedium;
+    src: url("../vendor/fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+    font-family: PopRegular;
+    src: url("../vendor/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: PopSemiBold;
+    src: url("../vendor/fonts/Poppins-SemiBold.ttf");
+}
+
+body {
+    background: black;
+
+    -webkit-touch-callout: none;
+    /* prevent callout to copy image, etc when tap to hold */
+    -webkit-user-select: none;
+    /* prevent copy paste, to allow, change 'none' to 'text' */
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    padding: 0 5%;
+
+
+    .mainOne {
+        height: 100vh;
+        display: table-row;
+
+        .logo {
+            padding-top: 50px;
+            max-height: 56px;
+            height: 56px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .title {
+            display: table-cell;
+            vertical-align: middle;
+
+            p {
+                font-family: PopBold;
+                font-size: 80px;
+                line-height: 1.2;
+                color: #fff;
+            }
+
+            span {
+                color: $aqua;
+            }
+        }
+
+    }
+
+    .capabilitiesScreen{
+        .title {
+            p {
+                font-family: PopBold;
+                font-size: 80px;
+                line-height: 1.2;
+                color: #fff;
+            }
+
+            span {
+                color: $aqua;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 1025px) {}
