@@ -41,7 +41,7 @@ body {
         display: table-row;
 
         .logo {
-            padding-top: 50px;
+            top: 50px;
             max-height: 56px;
             height: 56px;
             position: absolute;
@@ -66,22 +66,92 @@ body {
 
     }
 
-    .capabilitiesScreen{
-        .title {
-            p {
-                font-family: PopBold;
-                font-size: 80px;
-                line-height: 1.2;
-                color: #fff;
-            }
 
-            span {
-                color: $aqua;
-            }
-        }
-    }
 
 }
+
+.story{
+    .title {
+        h3 {
+            font-family: PopBold;
+            font-size: 60px;
+            line-height: 1.1;
+            color: #fff;
+        }
+
+        span {
+            color: $aqua;
+        }
+    }
+}
+
+.hamburger-container {
+    position: fixed;
+    right: 40px;
+    top: 50%;
+    z-index: 3;
+}
+.menu-button {
+    height: 45px;
+    width: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid $aqua;
+    border-radius: 50%;
+}
+.menu-button-lineTop {
+    margin-bottom: 6px;
+    width: 45px;
+}
+
+.menu-button-line {
+    height: 1px;
+    width: 25px;
+    background: $aqua;
+    transition: all .2s ease;
+}
+.menu-button-lineBottom {
+    margin-top: 6px;
+    width: 20px;
+}
+.menu-button-lineMiddle {
+    width: 17px;
+}
+
+
+// animation
+
+// .menu-button-styles-module--container--3StYg {
+//     border-color: #fff;
+// }
+// .menu-button-styles-module--lineTop--10zg3{
+//     -webkit-transform: translateY(7px) rotate(45deg);
+//     transform: translateY(7px) rotate(45deg);
+//     width: 30px;
+//     background: #fff;
+// }
+
+// .menu-button-styles-module--lineMiddle--2AtLV {
+//     -webkit-transform: translateX(26px);
+//     transform: translateX(26px);
+//     opacity: 0;
+// }
+
+// .menu-button-styles-module--lineBottom--LJKRL {
+
+//     background: #fff;
+//     width: 30px;
+//     -webkit-transform-origin: top left;
+//     transform-origin: top left;
+//     -webkit-transform: translate(4px,4px) rotate(-45deg);
+//     transform: translate(4px,4px) rotate(-45deg);
+// }
+
+
+
 
 
 

@@ -823,7 +823,7 @@ iframe {
 
 @media (min-width: 768px) and (min-height: 415px) {
     .page-content {
-        margin-top: 88px
+        margin-top: 700px
     }
 }
 
@@ -855,14 +855,14 @@ iframe {
 }
 
 .text-link {
-    color: #4285f4;
+    color: #4CA5AD;
     font-size: 14px;
     line-height: 1.714285714;
     text-decoration: none
 }
 
 .text-link:visited {
-    color: #4285f4
+    color: #4CA5AD
 }
 
 .text-link:hover,
@@ -1275,7 +1275,8 @@ iframe {
 
 @media (min-width: 1024px) {
     .footer .logo {
-        margin-right: 141px
+        margin-right: 141px;
+        max-height: 46px;
     }
 }
 
@@ -1316,8 +1317,8 @@ iframe {
 }
 
 .block.-active {
-    background: #060606;
-    box-shadow: #060606 0 0 40px
+    background: #000;
+    box-shadow: #000 0 0 40px
 }
 
 @media (min-width: 1024px) {
@@ -4001,7 +4002,7 @@ iframe {
 }
 
 [data-page='story'] {
-    background: #060606
+    background: #000
 }
 
 .story {
@@ -4097,7 +4098,7 @@ iframe {
 }
 
 .story--intro-background-image {
-    background-color: #060606;
+    background-color: #000;
     background-position: 50% 50%;
     background-size: 100vmax 100vmax;
     height: 100vmax;
@@ -4165,7 +4166,7 @@ iframe {
 .story--logo-lockup .text-link {
     display: inline-block;
     font-weight: 600;
-    margin-top: 30px;
+    margin-top: 20px;
     padding: 10px;
     text-align: center
 }
@@ -4184,7 +4185,7 @@ iframe {
 
 @media (min-width: 1440px) {
     .story--logo-lockup .text-link {
-        margin-top: 70px
+        margin-top: 20px
     }
 }
 

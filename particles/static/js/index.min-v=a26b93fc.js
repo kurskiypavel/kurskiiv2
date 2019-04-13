@@ -3669,7 +3669,7 @@
         const PhotoPage_1 = require("./PhotoPage");
         const Story_1 = require("./Story");
         const Header_1 = require("./Header");
-        const ShareModal_1 = require("./ShareModal");
+        // const ShareModal_1 = require("./ShareModal");
         exports.MOBILE_BREAKPOINT = "only screen and (max-width: 767px), only screen and (max-height: 415px)";
         exports.TABLET_BREAKPOINT = "only screen and (max-width: 1025px)";
         exports.LANDSCAPE_QUERY = "screen and (orientation: landscape)";
@@ -3703,7 +3703,7 @@
                     case "story":
                         this.story = new Story_1.StoryPage(this);
                         this.story.init();
-                        new ShareModal_1.ShareModal;
+                        // new ShareModal_1.ShareModal;
                         break;
                     case "how-it-works":
                     case "about":
@@ -3739,7 +3739,7 @@
         "./Header": 39,
         "./Home": 40,
         "./PhotoPage": 42,
-        "./ShareModal": 44,
+        // "./ShareModal": 44,
         "./Story": 47
     }],
     36: [function (require, module, exports) {
@@ -6299,7 +6299,7 @@
             SUCCESS: "-success",
             HIDE: "-hide"
         };
-        class ShareModal {
+        /*class ShareModal {
             constructor() {
                 this.keyCode = Object.freeze({
                     ESC: 27
@@ -6385,7 +6385,7 @@
                 setTimeout(() => this.modalContent.removeChild(successMessage), 3e3)
             }
         }
-        exports.ShareModal = ShareModal
+        exports.ShareModal = ShareModal*/
     }, {
         "../util/nodeListToArray": 61
     }],
@@ -6768,7 +6768,8 @@
                 if (top < SHOW_INTRO_BG_ABOVE && !this.isShowingHeroImage) {
                     this.isShowingHeroImage = true;
                     transitionToPromise_1.animate(introBg, {
-                        opacity: ".6"
+                        // opacity: ".6"
+                        opacity: "0"
                     }).then(() => {
                         if (!this.isShowingHeroImage) {
                             return
