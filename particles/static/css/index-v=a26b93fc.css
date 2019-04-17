@@ -1287,8 +1287,10 @@ iframe {
     font-size: 11px;
     line-height: 1.636363636;
     margin-top: 25px;
-    text-transform: uppercase
+    text-transform: uppercase;
+   
 }
+
 
 @media (min-width: 1024px) {
     .source-label {
@@ -4034,6 +4036,15 @@ iframe {
     -webkit-transform-origin: right top 0;
     transform-origin: right top 0;
     width: 400px
+}
+
+.story--header-title a{
+    color: unset;
+    text-decoration: none;
+}
+#js-work-with-us{
+    opacity: 0;
+    transition: 600ms;
 }
 
 @media (min-width: 768px) and (min-height: 415px) {

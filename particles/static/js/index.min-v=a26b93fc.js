@@ -6625,6 +6625,7 @@
             HEADER: ".js-sticky-header",
             INTRO_BACKGROUND: ".js-intro-background",
             INTRO_BACKGROUND_IMAGE: ".js-intro-background-image",
+            WORK_WITH_US_LABEL: "#js-work-with-us",
             INTRO_BACKGROUND_LOADER: ".js-intro-background-loader",
             INTRO_PARTICLES: ".js-intro-particles-container",
             RECAP_DRIFTERS: ".js-drifter",
@@ -6765,11 +6766,16 @@
             }
             updateHeroOpacity(top) {
                 const introBg = document.querySelector(SELECTORS.INTRO_BACKGROUND_IMAGE);
+                const workWithUs = document.querySelector(SELECTORS.WORK_WITH_US_LABEL);
                 if (top < SHOW_INTRO_BG_ABOVE && !this.isShowingHeroImage) {
                     this.isShowingHeroImage = true;
+                    transitionToPromise_1.animate(workWithUs, {
+                        // opacity: ".6"
+                        opacity: "0.0"
+                    })
                     transitionToPromise_1.animate(introBg, {
                         // opacity: ".6"
-                        opacity: "0"
+                        opacity: "0.0"
                     }).then(() => {
                         if (!this.isShowingHeroImage) {
                             return
@@ -6802,6 +6808,9 @@
                     this.introParticles = undefined;
                     transitionToPromise_1.animate(introBg, {
                         opacity: "0.0"
+                    })
+                    transitionToPromise_1.animate(workWithUs, {
+                        opacity: "1.0"
                     })
                 }
                 this.setupByWindowSize();

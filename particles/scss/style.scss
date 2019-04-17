@@ -70,7 +70,7 @@ body {
 
 }
 
-.story{
+.story {
     .title {
         h3 {
             font-family: PopBold;
@@ -80,7 +80,7 @@ body {
         }
 
         span {
-            color: $aqua;
+            color: $orange;
         }
     }
 }
@@ -89,8 +89,10 @@ body {
     position: fixed;
     right: 40px;
     top: 50%;
-    z-index: 3;
+    z-index: 126;
+    margin-top: -22.5px;
 }
+
 .menu-button {
     height: 45px;
     width: 45px;
@@ -101,7 +103,31 @@ body {
     cursor: pointer;
     border: 1px solid $aqua;
     border-radius: 50%;
+    &.open:hover{
+        .menu-button-lineTop{
+            transform: translate(6px,13px) rotate(45deg) !important;
+            -webkit-transform: translate(6px,13px) rotate(45deg) !important;
+            width: 28px !important;
+        }
+        .menu-button-lineBottom{
+            -webkit-transform: translate(11px,0px) rotate(-45deg)!important;
+            transform: translate(11px,0px) rotate(-45deg)!important;
+        }
+    }
+    &:not(.open):hover{
+        .menu-button-lineTop, {
+            transform: translateX(-9px) !important;
+            
+        }
+        .menu-button-lineBottom{
+            transform: translateX(-10px) !important;
+        }
+        .menu-button-lineMiddle {
+            transform: translateX(14px) !important;
+        }
+    }
 }
+
 .menu-button-lineTop {
     margin-bottom: 6px;
     width: 45px;
@@ -113,42 +139,200 @@ body {
     background: $aqua;
     transition: all .2s ease;
 }
+
 .menu-button-lineBottom {
     margin-top: 6px;
     width: 20px;
 }
+
 .menu-button-lineMiddle {
     width: 17px;
 }
 
 
-// animation
 
-// .menu-button-styles-module--container--3StYg {
-//     border-color: #fff;
-// }
-// .menu-button-styles-module--lineTop--10zg3{
-//     -webkit-transform: translateY(7px) rotate(45deg);
-//     transform: translateY(7px) rotate(45deg);
-//     width: 30px;
-//     background: #fff;
-// }
 
-// .menu-button-styles-module--lineMiddle--2AtLV {
-//     -webkit-transform: translateX(26px);
-//     transform: translateX(26px);
-//     opacity: 0;
-// }
+.menu-module {
 
-// .menu-button-styles-module--lineBottom--LJKRL {
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: $dark-blue;
+    opacity: 1;
+    color: #fff;
+    transition: all .3s ease;
+    left: 100%;
+    // left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 125;
 
-//     background: #fff;
-//     width: 30px;
-//     -webkit-transform-origin: top left;
-//     transform-origin: top left;
-//     -webkit-transform: translate(4px,4px) rotate(-45deg);
-//     transform: translate(4px,4px) rotate(-45deg);
-// }
+    &.active {
+        left: 0;
+    }
+
+    .menu-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 1440px;
+        height: 100%;
+        margin-right: 0;
+        .logo{
+            left: 175px;
+            top: 50px;
+            max-height: 56px;
+            height: 56px;
+            position: absolute;
+            z-index: 1;
+            animation: appear-menu-logo 1s linear;
+            
+        
+        }
+
+        .menu-list {
+            padding-left: 40px;
+            
+           
+            overflow-wrap: normal;
+
+            animation-delay: 1s;
+            animation: appear 1s linear;
+
+            a {
+                z-index: 100;
+                text-decoration: none;
+                background-color: transparent;
+
+
+
+
+                .menu-item {
+
+                    font-family: PopBold;
+                    font-size: 60px;
+                    padding: 1rem 0;
+                    transition: .2s;
+                    cursor: pointer;
+                    color: #fff;
+                    transition: .2s ease;
+                    &:hover{
+                        opacity: .5;
+                    }
+                    
+
+                }
+
+
+            }
+
+        }
+
+        .lets-build {
+            max-width: 450px;
+            color: $darker-aqua;
+            font-family: PopBold;
+            box-sizing: content-box;
+            display: block;
+            font-size: 40px;
+            vertical-align: top;
+            transition: .2s ease;
+            
+            
+            &:hover{
+                color: #fff;
+            }
+            
+            a{
+                color: unset;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+.rainbow{
+    animation: rainbow 20s linear;
+    animation-iteration-count: infinite;
+    -webkit-animation: rainbow 20s linear infinite;
+    
+}
+
+@keyframes rainbow{
+    100%,0%{
+        color: rgb(255,0,0);
+        
+    }
+    8%{
+        color: rgb(255,127,0);
+    }
+    16%{
+        color: rgb(255,255,0);
+    }
+    25%{
+        color: rgb(127,255,0);
+    }
+    33%{
+        color: rgb(0,255,0);
+    }
+    41%{
+        color: rgb(0,255,127);
+    }
+    50%{
+        color: rgb(0,255,255);
+    }
+    58%{
+        color: rgb(0,127,255);
+    }
+    66%{
+        color: rgb(0,0,255);
+    }
+    75%{
+        color: rgb(127,0,255);
+    }
+    83%{
+        color: rgb(255,0,255);
+    }
+    91%{
+        color: rgb(255,0,127);
+    }
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+        padding-left: 0px;
+        
+    }
+    100%{
+        opacity: 1;
+        padding-left: 40px;
+    }
+}
+@keyframes appear-menu-logo{
+    0%{
+        opacity: 0;
+        left: 5%;
+        
+    }
+    100%{
+        opacity: 1;
+        left: 175px;
+    }
+}
+
+
+.source-label.block--animate-reveal{
+    text-shadow: 2px 2px 3px #3a8289,-2px -2px 3px #3a8289;
+}
+
+
+
+
 
 
 
