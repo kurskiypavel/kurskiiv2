@@ -303,5 +303,8 @@ var App = function() {
     _initKeyboard();*/
     _setPreset(_currPreset);
     _engine.start();
+    
+    // tell canvas is ready for presentation
+    document.getElementById('webgl-container').classList.add('rendered');
 
 };

@@ -12,7 +12,9 @@
 
 
     <link href="/static/css/index-v=a26b93fc.css" type="text/css" rel="stylesheet">
-
+    <script>
+        location.hash = "";
+    </script>
 
 </head>
 
@@ -52,7 +54,7 @@
             <div class="story--intro-placeholder"></div>
             <div class="story--header">
                 <div id="js-work-with-us" class="story--header-copy">
-                    <h1 class="story--header-title source-label"> <a href="">Work with us</a></h1>
+                    <h1 class="story--header-title source-label"> <a id="workWithUs">Work with us</a></h1>
                     <!-- <h1 class="story--header-title source-label">Clients</h1> -->
                 </div>
                 <div class="hamburger-container">
@@ -66,7 +68,7 @@
                     </div>
                 </div>
             </div>
-            <div class="story--headline-container grid-parent">
+            <div id="capabilities" class="story--headline-container grid-parent">
                 <div
                     class="block block--text-highlight grid-item grid-span-7 grid-span-s-4 grid-start-s-2 grid-span-m-6 grid-start-m-3 grid-span-row-2">
                     <div class="block--text">
@@ -101,10 +103,10 @@
 
                     <div class="block--media block--animate-reveal js-animate-reveal">
 
-                        <!-- <img src="https://lh3.googleusercontent.com/u8hnVai1fmfMvR4w0-SY-lOgq2I-PupKYCUA6VXJnlQde_W32-ly7yPiF9qn3AcO6-Sw6qrKBpTKBRynfUdcd80=w564-l80-sg-rj"
-                            srcset="https://lh3.googleusercontent.com/u8hnVai1fmfMvR4w0-SY-lOgq2I-PupKYCUA6VXJnlQde_W32-ly7yPiF9qn3AcO6-Sw6qrKBpTKBRynfUdcd80=w564-l80-sg-rj, https://lh3.googleusercontent.com/u8hnVai1fmfMvR4w0-SY-lOgq2I-PupKYCUA6VXJnlQde_W32-ly7yPiF9qn3AcO6-Sw6qrKBpTKBRynfUdcd80=w1128-l80-sg-rj 2x, https://lh3.googleusercontent.com/u8hnVai1fmfMvR4w0-SY-lOgq2I-PupKYCUA6VXJnlQde_W32-ly7yPiF9qn3AcO6-Sw6qrKBpTKBRynfUdcd80=w1692-l80-sg-rj 3x"
-                            alt="A poster promoting the Mayflower Hotel"> -->
-                        <video muted autoplay loop src="static/videos/vr experience_1.mp4"></video>
+                        <div style="width: 100%;background: #000000b3;position: absolute;max-width: 355px;padding: 0 60px;height: 100%;">
+                            <p style="line-height: 1.1;font-size: 27px;font-family: Popbold;text-align: center;color: #fff;">UX</p>
+                        </div>
+                        <video class="video" muted loop src="static/videos/stubhub.mp4"></video>
                     </div>
 
                     <div class="block--text">
@@ -115,10 +117,9 @@
                         </p> -->
 
 
-                        <p class="block--animate-reveal js-animate-reveal">We are UX experts, but building extraordinary
-                            interactive experiences would not be possible without the knowledge and broad usage of
-                            numerous different things, for example, WebGL, GSAP, PlayCanvas, ThreeJS, Phaser, A-Frame
-                            and many more.
+                        <p class="block--animate-reveal js-animate-reveal">We do this by analysing user behaviour and
+                            their responses to determine the most effective avenue of communication to reach business
+                            goals.
                         </p>
 
 
@@ -136,19 +137,28 @@
       ">
 
                     <div class="block--media block--animate-reveal js-animate-reveal">
-                        <img src="" alt="Opening credit from the Felix the Cat cartoon">
+                        <div style="width: 100%;background: #000000b3;position: absolute;max-width: 355px;padding: 0 60px;height: 100%;">
+                            <p style="line-height: 1.1;font-size: 27px;font-family: Popbold;text-align: center;color: #fff;">INTERACTIVE INTERFACES</p>
+                        </div>
+                        <video class="video" muted loop src="static/videos/animated.mp4"></video>
                     </div>
 
                     <div class="block--text">
 
 
-                        <p class="block--animate-reveal js-animate-reveal">Front-end programmers at Albi follow OOCSS
-                            principles to organize CSS across large-scale projects. Our experts write truly modular,
-                            reusable code and effectively collaborate with the team.
+                        <p class="block--animate-reveal js-animate-reveal">Interaction is the essence of our company, an
+                            egalitarian approach to creation where the brand is king and the experience must support it
+                            whether on a diminutive mobile device or as an all encompassing virtual world.
+
+                            For us every interaction, every touch, every gesture is built with passion and purpose to
+                            bring the best interface.
+
+                            This focus and singularity is the reason why what we produce is so hard to put down.
                         </p>
 
 
-                        <span class="source-label block--animate-reveal js-animate-reveal">Interaction and Interface</span>
+                        <span class="source-label block--animate-reveal js-animate-reveal">Interaction and
+                            Interface</span>
 
                     </div>
                 </div>
@@ -163,26 +173,18 @@
 
                     <div class="block--media block--animate-reveal js-animate-reveal">
 
-                        <!-- <img
-                  src="https://storage.googleapis.com/gc-nyt-images/v5/stories/uncle-sam/felix-the-cat/felix-the-cat_gif.gif"
-                  width="564" alt="Gif of Felix the Cat" /> -->
-                        <img src="" width="564" alt="Gif of Felix the Cat" />
+                        <div style="width: 100%;background: #000000b3;position: absolute;max-width: 355px;padding: 0 60px;height: 100%;">
+                            <p style="line-height: 1.1;font-size: 27px;font-family: Popbold;text-align: center;color: #fff;">GAMES</p>
+                        </div>
+                        <video poster="/static/videos/gamedev.jpg" class="video" muted loop
+                            src="static/videos/gamedev.mp4"></video>
 
                     </div>
 
                     <div class="block--text">
-
-                        <!-- <p class="block--animate-reveal js-animate-reveal block--image-credit">U.S. National Archives
-                        </p> -->
-
-
-                        <p class="block--animate-reveal js-animate-reveal">For standard web applications we use PHP as a
-                            core technology, but for high loaded real-time systems RoR is just a better option. For
-                            persistent data storage we use PostgreSQL or MySQL, if it makes more sense. As a Key-value
-                            storage we prefer Redis, and for messaging - RabbitMQ. We also have extensive experience
-                            with both types of hosting, the classical hardware and modern cloud based. In each
-                            particular case developers design a specific technological stack to sustain needs of the
-                            application, as well as to make it stable and fast.
+                        <p class="block--animate-reveal js-animate-reveal">Whether a fully fledged game or the
+                            opportunity to share stories with fellow viewers, our purpose is to create destinations
+                            where people feel that the time they spend is for their own reward.
                         </p>
                         <span class="source-label block--animate-reveal js-animate-reveal">Game development</span>
                     </div>
@@ -192,26 +194,18 @@
                 <div style="grid-row-start: 4"
                     class="block block--image grid-item js-story-block grid-span-6 grid-start-2 grid-span-s-4 grid-start-s-2 grid-start-m-2 grid-span-row-2 grid-left-side">
                     <div class="block--media block--animate-reveal js-animate-reveal">
-                        <!-- <img src="https://lh3.googleusercontent.com/6YBv7-jDJCZrBmG9m_KZm3NUVfChBHTpAmWVKx7Vph6UEjAPM8ALpfmKAhQ6QE2q0g0ZpSdfH7pf2CNNxAoM7CI=w564-l80-sg-rj"
-                            srcset="https://lh3.googleusercontent.com/6YBv7-jDJCZrBmG9m_KZm3NUVfChBHTpAmWVKx7Vph6UEjAPM8ALpfmKAhQ6QE2q0g0ZpSdfH7pf2CNNxAoM7CI=w564-l80-sg-rj, https://lh3.googleusercontent.com/6YBv7-jDJCZrBmG9m_KZm3NUVfChBHTpAmWVKx7Vph6UEjAPM8ALpfmKAhQ6QE2q0g0ZpSdfH7pf2CNNxAoM7CI=w1128-l80-sg-rj 2x, https://lh3.googleusercontent.com/6YBv7-jDJCZrBmG9m_KZm3NUVfChBHTpAmWVKx7Vph6UEjAPM8ALpfmKAhQ6QE2q0g0ZpSdfH7pf2CNNxAoM7CI=w1692-l80-sg-rj 3x"
-                            alt="The Felix balloon in the Macy’s Day Parade in 1931"> -->
-                        <img src=""
-                            alt="The Felix balloon in the Macy’s Day Parade in 1931">
+                        <div style="width: 100%;background: #000000b3;position: absolute;max-width: 355px;padding: 0 60px;height: 100%;">
+                            <p style="line-height: 1.1;font-size: 27px;font-family: Popbold;text-align: center;color: #fff;">WEB ANIMATION</p>
+                        </div>
+                        <video class="video" muted loop src="static/videos/webanimation.mp4"></video>
                     </div>
 
                     <div class="block--text">
 
-                        <!-- <p class="block--animate-reveal js-animate-reveal block--image-credit">&#34;1927-1928 Felix the
-                            Cat
-                            Years&#34;, Macy&#39;s via Wikia
-                        </p> -->
-
-
-                        <p class="block--animate-reveal js-animate-reveal">Today it’s hard to imagine web products not
-                            linked to popular services. Our developers have implemented a bunch of different
-                            integrations, e.g. social networks(Facebook, Twitter), payment systems (Paypal, Stripe,
-                            Braintree), geo services (Foursquare, Google Maps/Places, Yahoo Local, Yelp, etc.), email
-                            marketing (Sendgrid, Mailchimp), business tools (LinkedIn, Zendesk, Pivotal Tracker), etc.
+                        <p class="block--animate-reveal js-animate-reveal">The modern audience bored watching the same
+                            static “Word style” websites. They shape their own digital landscapes and demand experiences
+                            that align with their requirements. Our aim is to work with you to discover what their needs
+                            are and create spaces in which those needs can be met.
                         </p>
 
 
@@ -227,25 +221,27 @@
                     <h3 class="headline headline--three source-label">Recap</h3>
                     <div class="story--recap-text js-recap-text">
 
-                        <p class="js-animate-reveal">We are crazy about interactivity because we believe that days of flat “PDF style” digital products gone. Now let your users enjoy the internet!
-                            
-                               
+                        <p class="js-animate-reveal">We are crazy about interactivity because we believe that days of
+                            flat “PDF style” digital products gone. Now let your users enjoy the internet!
+
+
                         </p>
                         <p class="js-animate-reveal">
-                            
-                                Behind the scenes at Albi stand hippie engineers and freaky developers that sold their souls to the devil for a talent.
+
+                            Behind the scenes at Albi stand hippie engineers and freaky developers that sold their souls
+                            to the devil for a talent.
                         </p>
 
                     </div>
                     <div class="story--recap-images js-recap-images grid-item grid-span-8 grid-span-m-12">
                         <div class="story--recap-drifter js-drifter">
-                            
+
                             <img src="static/images/team.png" alt="Busy mature boys">
                             <p class="block--image-credit">Busy mature boys
                             </p>
                         </div>
                         <div class="story--recap-drifter story--recap-drifter-right js-drifter">
-                            
+
                             <img src="static/images/speech.png" alt="Spreading the words - The Tech Off 2018">
                             <p class="block--image-credit">Spreading the words - The Tech Off 2018
                             </p>
@@ -255,11 +251,11 @@
                 </div>
                 <div class="story--logo-lockup grid-item grid-span-8 grid-span-m-12">
                     <img src="">
-                    <a href="#talk" class="text-link ">Talk to team</a>
+                    <a href="mailto:hello@albi.studio" class="text-link">Talk to team</a>
                 </div>
 
             </div>
-            <div class="story--related-stories stories-nav">
+            <div id="clients" class="story--related-stories stories-nav">
                 <div class="stories-nav--container js-stories-nav js-card-carousel">
                     <div class="stories-nav--text-container">
                         <h3 class="stories-nav--headline">The results of collaboration with </h3>
@@ -268,21 +264,23 @@
 
 
                             <div class="stories-nav--title js-stories-title">
-                                <a href="http://www.1185design.com/" class="stories-nav--headline">1185</a>
+                                <a target="_blank" href="https://cloudimperiumgames.com/"
+                                    class="stories-nav--headline">Cloud Imperium</a>
                             </div>
 
 
 
 
                             <div class="stories-nav--title js-stories-title">
-                                <a href="franksgiving.html" class="stories-nav--headline">RESN</a>
+                                <a target="_blank" href="https://www.leeroy.ca/"
+                                    class="stories-nav--headline">Leeroy</a>
                             </div>
 
 
 
 
                             <div class="stories-nav--title js-stories-title">
-                                <a href="santa-claus.html" class="stories-nav--headline">The Hub</a>
+                                <a target="_blank" href="" class="stories-nav--headline">Marketing</a>
                             </div>
 
 
@@ -293,19 +291,15 @@
 
 
                         <div class="stories-nav--item js-stories-image js-card">
-                            <a href="felix-the-cat.html"><img
-                                    src="https://lh3.googleusercontent.com/6bpPDjxSTzxD8pq5_VVYbkKP_m3ffXOJy6EERXuS2plPe35m7jPXKbkWeWhbLiDcx6HPffKnY3LI94FB_lK1pg=w440-l80-sg-rj"
-                                    srcset="https://lh3.googleusercontent.com/6bpPDjxSTzxD8pq5_VVYbkKP_m3ffXOJy6EERXuS2plPe35m7jPXKbkWeWhbLiDcx6HPffKnY3LI94FB_lK1pg=w440-l80-sg-rj, https://lh3.googleusercontent.com/6bpPDjxSTzxD8pq5_VVYbkKP_m3ffXOJy6EERXuS2plPe35m7jPXKbkWeWhbLiDcx6HPffKnY3LI94FB_lK1pg=w880-l80-sg-rj 2x, https://lh3.googleusercontent.com/6bpPDjxSTzxD8pq5_VVYbkKP_m3ffXOJy6EERXuS2plPe35m7jPXKbkWeWhbLiDcx6HPffKnY3LI94FB_lK1pg=w1320-l80-sg-rj 3x"
-                                    alt="A still from a Felix the Cat cartoon of Felix laughing"></a>
+                            <a target="_blank" href="https://robertsspaceindustries.com/telemetry"><img
+                                    src="/static/images/starcitizen.png" alt=""></a>
                         </div>
 
 
 
 
                         <div class="stories-nav--item js-stories-image js-card">
-                            <a href="franksgiving.html"><img
-                                    src="https://lh3.googleusercontent.com/h0RtE2OEiEuGccciLkGJ44iJWMkP5LrGb093uAc-YCnIjXO9awE7SAVxZhHCE_w2ltyCbc8GsR_9Kd1XQ5pi_Y8=w440-l80-sg-rj"
-                                    srcset="https://lh3.googleusercontent.com/h0RtE2OEiEuGccciLkGJ44iJWMkP5LrGb093uAc-YCnIjXO9awE7SAVxZhHCE_w2ltyCbc8GsR_9Kd1XQ5pi_Y8=w440-l80-sg-rj, https://lh3.googleusercontent.com/h0RtE2OEiEuGccciLkGJ44iJWMkP5LrGb093uAc-YCnIjXO9awE7SAVxZhHCE_w2ltyCbc8GsR_9Kd1XQ5pi_Y8=w880-l80-sg-rj 2x, https://lh3.googleusercontent.com/h0RtE2OEiEuGccciLkGJ44iJWMkP5LrGb093uAc-YCnIjXO9awE7SAVxZhHCE_w2ltyCbc8GsR_9Kd1XQ5pi_Y8=w1320-l80-sg-rj 3x"
+                            <a target="_blank" href="https://packwire.com/"><img src="/static/images/packwire.png"
                                     alt="Franklin D. Roosevelt in a presidential motorcade giving the peace sign"></a>
                         </div>
 
@@ -313,7 +307,7 @@
 
 
                         <div class="stories-nav--item js-stories-image js-card">
-                            <a href="santa-claus.html"><img
+                            <a target="_blank" href="santa-claus.html"><img
                                     src="https://lh3.googleusercontent.com/B3TikqSpJ9gtI7Y49r69B6IBhs9n-6Z6NpmJn3OpdoVBzmQC-x7eV35hK-apNcsJsc6YpLBqKL08KzmhvItXw9Q=w440-l80-sg-rj"
                                     srcset="https://lh3.googleusercontent.com/B3TikqSpJ9gtI7Y49r69B6IBhs9n-6Z6NpmJn3OpdoVBzmQC-x7eV35hK-apNcsJsc6YpLBqKL08KzmhvItXw9Q=w440-l80-sg-rj, https://lh3.googleusercontent.com/B3TikqSpJ9gtI7Y49r69B6IBhs9n-6Z6NpmJn3OpdoVBzmQC-x7eV35hK-apNcsJsc6YpLBqKL08KzmhvItXw9Q=w880-l80-sg-rj 2x, https://lh3.googleusercontent.com/B3TikqSpJ9gtI7Y49r69B6IBhs9n-6Z6NpmJn3OpdoVBzmQC-x7eV35hK-apNcsJsc6YpLBqKL08KzmhvItXw9Q=w1320-l80-sg-rj 3x"
                                     alt="Illustration of a child hugging Santa Claus by Thomas Nast"></a>
@@ -382,11 +376,55 @@
     </div>
 
     <div class="menu-module">
-        
+    </div>
+    <div class="contact-module">
 
+        <div class="contact-container">
+            <img id="contactLogo" class="logo" src="images/logo-black.png" alt="">
+            <div class="contact-column one">
+                <p class="title">What are
+                    you looking
+                    to build?</p>
 
-            
-       
+                <p class="text">
+                    Whether you’re a art director, VC or other,
+                    reach out and tell us what you’re up to. How can
+                    we help?
+                </p>
+            </div>
+            <div class="contact-column two">
+                <div class="contact-menu">
+                    <div class="tags flex">
+                        <div id="emailTag" class="tag active">
+                            Electronic mail
+                        </div>
+                        <div id="landTag" class="tag">
+                            Land
+                        </div>
+                        <div id="internetTag" class="tag">
+                            Social places
+                        </div>
+                    </div>
+
+                    <div id="js-contact-item" class="menu-item">
+                        <div class="item">
+                            Get in touch: <a href="mailto:hello@albi.studio">hello@albi.studio</a>
+                        </div>
+                        <div class="item">
+                            Work with us: <a href="mailto:newbusiness@albi.studio">newbusiness@albi.studio</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="splash-module"><img class="logo" src="images/logo.png" alt=""></div>
+    <div id="js-hint" class="hidden">
+        <section class="location-marker">
+            <h1>Click and Drag</h1>
+        </section>
     </div>
 
 
