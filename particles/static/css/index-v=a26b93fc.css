@@ -1261,24 +1261,7 @@ iframe {
     outline-offset: 8px
 }
 
-.footer .logo {
-    margin-top: 20px
-}
 
-@media (min-width: 768px) and (min-height: 415px) {
-    .footer .logo {
-        align-self: center;
-        margin: 0 56px 0 0;
-        order: 1
-    }
-}
-
-@media (min-width: 1024px) {
-    .footer .logo {
-        margin-right: 141px;
-        max-height: 46px;
-    }
-}
 
 .source-label {
     color: #fff;
@@ -1430,6 +1413,12 @@ iframe {
     font-size: 24px;
     line-height: 1.333333333
 }
+@media (max-width: 767px) {
+    .block--text-highlight .headline {
+        font-size: 20px;
+    }
+    
+}
 
 @media (min-width: 1024px) {
     .block--text-highlight .headline {
@@ -1524,7 +1513,7 @@ iframe {
 .stories-nav--container {
     margin-top: 40px;
     overflow: hidden;
-    padding: 80px 0 40px;
+    padding: 80px 0 140px;
     position: relative;
     text-align: center
 }
@@ -4012,14 +4001,27 @@ iframe {
     position: relative
 }
 
-.story--header {
-    height: 50vh;
-    max-height: 70vh
+
+
+
+@media (min-width: 768px) {
+    .story--header {
+        height: 50vh;
+        max-height: 70vh
+    }
+}
+
+@media (max-width: 767px) {
+    .story--header {
+        height: 85vh;
+        
+    }
 }
 
 @media (min-width: 768px) and (min-height: 415px) {
     .story--header {
-        height: 58vh
+        /* height: 58vh */
+        height: 40vh
     }
 }
 
@@ -4913,7 +4915,8 @@ iframe {
 }
 
 .card-carousel-arrow-right {
-    right: 8px
+    /* right: 8px */
+    right: 4%;
 }
 
 .card-carousel-arrow-right::before {
@@ -4924,7 +4927,8 @@ iframe {
 }
 
 .card-carousel-arrow-left {
-    left: 8px
+    /* left: 8px */
+    left: 4%
 }
 
 .card-carousel-arrow-left::before {

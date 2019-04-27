@@ -8,7 +8,7 @@ var observer = new MutationObserver(function (mutations) {
         if (mutation.target.attributes['class'].value === 'rendered') {
             // later replace by annimation
             document.getElementsByClassName('splash-module')[0].remove();
-            document.getElementsByTagName('body')[0].style.overflow='auto';
+            document.getElementsByTagName('body')[0].style.overflow = 'auto';
             // stop observing
             observer.disconnect();
         }
@@ -302,11 +302,10 @@ function followMouse() {
 
 var helpBox = document.getElementById("js-hint");
 
-var showHelpBox = function(show) {
+var showHelpBox = function (show) {
     if (show) {
         helpBox.classList.remove("hidden");
-    }
-    else {
+    } else {
         helpBox.classList.add("hidden");
     }
 };
@@ -323,13 +322,23 @@ if (!localStorage["albistudio.particles.helpShown"]) {
 
 /*  Video play functionality BEGINS */
 
-var videos = document.querySelectorAll('video');
-videos.forEach(function (video) {
-    video.addEventListener('mouseover',function(){
-        this.play();
+var posters = document.querySelectorAll('.js-poster');
+posters.forEach(function (poster) {
+
+    // Desktop
+    poster.addEventListener('mouseover', function () {
+        this.nextElementSibling.play();
     });
-    video.addEventListener('mouseleave',function(){
-        this.pause();
+    poster.addEventListener('mouseleave', function () {
+        this.nextElementSibling.pause();
+    });
+
+    // IPad and Phones - NOT TESTED
+    poster.addEventListener('touchstart', function () {
+        this.nextElementSibling.play();
+    });
+    poster.addEventListener('touchend', function () {
+        this.nextElementSibling.pause();
     });
 });
 
