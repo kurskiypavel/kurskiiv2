@@ -214,12 +214,13 @@ const tags = document.querySelectorAll('.tags .tag');
 const menuItem = document.getElementById('js-contact-item');
 
 function activateContactInfo(id) {
-    if (id === 'landTag') {
-        menuItem.innerHTML = '<div class="item flex">\
-            <img class="flag" src="images/mapple.jpg" alt="" class="mapple">\
-            <p class="city">toronto</p>\
+    if (id === 'emailTag') {
+        menuItem.innerHTML = '<div class="item">Get in touch: \
+            <a href="mailto:hello@albi.studio">hello@albi.studio</a>\
         </div>\
-        <div class="adress">2nd Floor, 205<br>181 Carlaw Ave.<br>Toronto, ON<br>Canada</div>';
+        <div class="item">Work with us: \
+            <a href="mailto:newbusiness@albi.studio">newbusiness@albi.studio</a>\
+        </div>';
     } else if (id === 'internetTag') {
         menuItem.innerHTML = '<div class="item">Reach Out On: \
             <a target="_blank"  href="https://t.me/albistudio">Telegram</a>\
@@ -228,12 +229,11 @@ function activateContactInfo(id) {
             <a target="_blank" href="https://www.behance.net/albistudio">Behance</a>\
         </div>';
     } else {
-        menuItem.innerHTML = '<div class="item">Get in touch: \
-            <a href="mailto:hello@albi.studio">hello@albi.studio</a>\
-        </div>\
-        <div class="item">Work with us: \
-            <a href="mailto:newbusiness@albi.studio">newbusiness@albi.studio</a>\
-        </div>';
+        menuItem.innerHTML = '<div class="item flex">\
+                <img class="flag" src="images/mapple.jpg" alt="" class="mapple">\
+                <p class="city">toronto</p>\
+            </div>\
+        <div class="adress">2nd Floor, 205<br>181 Carlaw Ave.<br>Toronto, ON<br>Canada</div>';
     }
 }
 

@@ -51,7 +51,7 @@ body {
         .title {
             display: table-cell;
             vertical-align: middle;
-            
+
             p {
                 font-family: PopBold;
 
@@ -425,29 +425,21 @@ body {
     }
 
     .contact-container {
-        display: flex;
+
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        max-width: 1440px;
         height: 100%;
         margin-right: 0;
 
         .logo {
-            left: 175px;
-            top: 50px;
-            max-height: 56px;
-            height: 56px;
+
             position: absolute;
             z-index: 1;
         }
 
         .tag {
-            font-size: 16px;
-            padding-top: 2px;
-            border-top: 1.4px solid;
             border-color: #fff;
-            margin-right: 20px;
 
             &.active {
                 border-color: #000;
@@ -455,10 +447,7 @@ body {
         }
 
         .menu-item {
-            font-size: 23px;
             font-family: PopRegular;
-            line-height: 33px;
-            margin-top: 35px;
             width: 100%;
 
             a {
@@ -466,58 +455,35 @@ body {
                 text-decoration: unset;
             }
 
-            .item {
-                margin-bottom: 10px;
-            }
-
         }
 
         .contact-column.one {
-            padding-left: 78px;
+
             overflow-wrap: normal;
-            max-width: 603px;
+
 
             .title {
                 font-family: PopBold;
-                font-size: 80px;
-                line-height: 89px;
+
             }
 
             .text {
-                padding-top: 40px;
+
                 font-family: PopRegular;
-                font-size: 30px;
-                line-height: 41px;
+
                 opacity: 0.8;
             }
         }
 
         .contact-column.two {
-            width: 450px;
             box-sizing: content-box;
             display: block;
-            font-size: 20px;
-            line-height: 24px;
             vertical-align: top;
-
-            .contact-menu {
-                height: 405px;
-            }
 
             .city {
                 font-family: PopBold;
-                font-size: 38px;
                 color: $red;
                 text-transform: uppercase;
-            }
-
-            .flag {
-                max-height: 29px;
-                margin-right: 10px;
-            }
-
-            .adress {
-                padding-left: 35px;
             }
         }
     }
@@ -655,6 +621,76 @@ body {
         max-width: 355px;
     }
 
+    .contact-container {
+        max-width: 1440px;
+        display: flex;
+
+        .menu-item {
+            font-size: 23px;
+            line-height: 33px;
+            margin-top: 35px;
+
+            .item {
+                margin-bottom: 10px;
+            }
+        }
+
+        .logo {
+            left: 175px;
+            top: 50px;
+            max-height: 56px;
+            height: 56px;
+        }
+
+        .tag {
+            font-size: 16px;
+            padding-top: 2px;
+            border-top: 1.4px solid;
+            border-color: #fff;
+            margin-right: 20px;
+        }
+
+        .contact-column.one {
+            max-width: 603px;
+            padding-left: 78px;
+
+            .title {
+                font-size: 80px;
+                line-height: 89px;
+            }
+
+            .text {
+                padding-top: 40px;
+                font-size: 30px;
+                line-height: 41px;
+            }
+        }
+
+        .contact-column.two {
+            width: 450px;
+            font-size: 20px;
+            line-height: 24px;
+
+            .contact-menu {
+                height: 405px;
+            }
+
+            .city {
+                font-size: 38px;
+            }
+
+            .flag {
+                max-height: 29px;
+                margin-right: 10px;
+            }
+
+            .adress {
+                padding-left: 35px;
+            }
+        }
+    }
+
+
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1366px) {
@@ -705,7 +741,76 @@ body {
         }
     }
 
+    .contact-container {
+        max-width: 980px;
+        display: flex;
 
+        .menu-item {
+            font-size: 17px;
+            line-height: 26px;
+            margin-top: 23px;
+
+            .item {
+                margin-bottom: 4px;
+            }
+        }
+
+        .logo {
+            left: 87px;
+            transform: scale(0.8);
+            -webkit-transform: scale(0.8);
+            top: 50px;
+            max-height: 56px;
+            height: 56px;
+        }
+
+        .tag {
+            font-size: 14px;
+            padding-top: 2px;
+            border-top: 1.4px solid;
+            border-color: #fff;
+            margin-right: 16px;
+        }
+
+        .contact-column.one {
+            max-width: 420px;
+            padding-left: 50px;
+
+            .title {
+                font-size: 50px;
+                line-height: 59px;
+            }
+
+            .text {
+                font-size: 19px;
+                line-height: 30px;
+                padding-top: 25px;
+            }
+        }
+
+        .contact-column.two {
+            width: 342px;
+            font-size: 20px;
+            line-height: 24px;
+
+            .contact-menu {
+                height: 270px;
+            }
+
+            .city {
+                font-size: 24px;
+            }
+
+            .flag {
+                max-height: 22px;
+                margin-right: 5px;
+            }
+
+            .adress {
+                padding-left: 28px;
+            }
+        }
+    }
 
 
 
@@ -765,6 +870,76 @@ body {
         }
     }
 
+    .contact-container {
+        max-width: 729px;
+        display: flex;
+
+        .menu-item {
+            font-size: 14px;
+            line-height: 22px;
+            margin-top: 14px;
+
+            .item {
+                margin-bottom: 4px;
+            }
+        }
+
+        .logo {
+            left: 76px;
+            transform: scale(0.8);
+            -webkit-transform: scale(0.8);
+            top: 50px;
+            max-height: 56px;
+            height: 56px;
+        }
+
+        .tag {
+            font-size: 14px;
+            padding-top: 2px;
+            border-top: 1.4px solid;
+            border-color: #fff;
+            margin-right: 16px;
+        }
+
+        .contact-column.one {
+            max-width: 286px;
+            padding-left: 53px;
+
+            .title {
+                font-size: 38px;
+                line-height: 47px;
+            }
+
+            .text {
+                font-size: 16px;
+                line-height: 25px;
+                padding-top: 13px;
+            }
+        }
+
+        .contact-column.two {
+            width: 283px;
+            font-size: 20px;
+            line-height: 24px;
+
+            .contact-menu {
+                height: 236px;
+            }
+
+            .city {
+                font-size: 24px;
+            }
+
+            .flag {
+                max-height: 22px;
+                margin-right: 5px;
+            }
+
+            .adress {
+                padding-left: 28px;
+            }
+        }
+    }
 
     .video {
 
@@ -825,6 +1000,80 @@ body {
         .lets-build {
             max-width: 251px;
             font-size: 21px;
+        }
+    }
+
+    .contact-container {
+        max-width: 320px;
+        display: grid;
+
+        .menu-item {
+            font-size: 14px;
+            line-height: 22px;
+            margin-top: 14px;
+
+            .item {
+                margin-bottom: 4px;
+            }
+        }
+
+        .logo {
+            left: 3%;
+            top: 28px;
+            max-height: 30px;
+            height: 30px;
+        }
+
+        .tag {
+            font-size: 14px;
+            padding-top: 2px;
+            border-top: 1.4px solid;
+            border-color: #fff;
+            margin-right: 16px;
+        }
+
+        .contact-column.one {
+            max-width: 287px;
+            padding-left: 3%;
+            position: absolute;
+            top: 125px;
+
+            .title {
+                font-size: 30px;
+                line-height: 36px;
+            }
+
+            .text {
+                font-size: 15px;
+                line-height: 23px;
+                padding-top: 13px;
+            }
+        }
+
+        .contact-column.two {
+            width: 281px;
+            font-size: 20px;
+            line-height: 24px;
+            position: absolute;
+            top: 342px;
+            padding-left: 3%;
+
+            .contact-menu {
+                height: 170px;
+            }
+
+            .city {
+                font-size: 24px;
+            }
+
+            .flag {
+                max-height: 22px;
+                margin-right: 5px;
+            }
+
+            .adress {
+                padding-left: 28px;
+            }
         }
     }
 
