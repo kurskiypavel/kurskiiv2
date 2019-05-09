@@ -99,8 +99,7 @@ var lineBottomStylesDef = {
 }
 
 function hamburgerAnimation() {
-    // hide contact module
-    contactModule.classList.remove('active');
+    
 
     if (menuButton.classList.contains('open') === true) {
         menuButton.classList.remove('open');
@@ -114,6 +113,9 @@ function hamburgerAnimation() {
         setStylesOnElement(lineTopStyles, lineTop);
         setStylesOnElement(lineMiddleStyles, lineMiddle);
         setStylesOnElement(lineBottomStyles, lineBottom);
+        
+        // hide contact module
+        deactivateContact();
     }
 }
 
@@ -151,6 +153,12 @@ function chooseMenuListeners() {
 
     // listener for contact module
     document.getElementById('showContact').addEventListener('click', activateContact);
+
+    // close menu module and get back home by clicking logo
+    document.getElementById('menuLogo').addEventListener('click', function () {
+        location.href = '#';
+        deactivateMenu();
+    });
 }
 
 
@@ -160,7 +168,7 @@ function activateMenu() {
     // show menu
     menuModule.classList.add('active');
 
-    menuModule.innerHTML = '<div class="menu-container"><img class="logo" src="images/logo.png" alt=""><div class="menu-list">\
+    menuModule.innerHTML = '<div class="menu-container"><img id="menuLogo" class="logo" src="images/logo.png" alt=""><div class="menu-list">\
     <a class="js-choose-menu" href="#capabilities"><div class="menu-item">Capabilities</div></a>\
     <a  id="showContact" class="js-choose-menu" ><div class="menu-item">Contact</div></a>\
     <a class="js-choose-menu" href="#clients"><div class="menu-item">Clients</div></a>\
@@ -183,6 +191,8 @@ menuButton.addEventListener('click', function () {
 });
 
 
+
+
 /* Works with menu module END */
 
 
@@ -191,6 +201,11 @@ menuButton.addEventListener('click', function () {
 
 // setters
 const contactModule = document.getElementsByClassName('contact-module')[0];
+const tags = document.querySelectorAll('.tags .tag');
+const menuItem = document.getElementById('js-contact-item');
+const middleTag = document.getElementById('emailTag');
+const contactSVG = document.querySelectorAll('.contact-menu svg')[0];
+
 
 
 function activateContact() {
@@ -210,18 +225,30 @@ function deactivateContact() {
 
 }
 
-const tags = document.querySelectorAll('.tags .tag');
-const menuItem = document.getElementById('js-contact-item');
 
-function activateContactInfo(id) {
+// Main function for single menu item
+function activateContactInfo(tagObject) {
+
+    // get clicked menu tag ID
+    let id = tagObject.id;
+
+    // get which one is clicked
     if (id === 'emailTag') {
+
+        // filling the content
         menuItem.innerHTML = '<div class="item">Get in touch: \
             <a href="mailto:hello@albi.studio">hello@albi.studio</a>\
         </div>\
         <div class="item">Work with us: \
             <a href="mailto:newbusiness@albi.studio">newbusiness@albi.studio</a>\
         </div>';
+
     } else if (id === 'internetTag') {
+        // pseudo animation for middle tag
+        middleTag.classList.remove('left');
+        middleTag.classList.add('right');
+
+        // filling the content
         menuItem.innerHTML = '<div class="item">Reach Out On: \
             <a target="_blank"  href="https://t.me/albistudio">Telegram</a>\
         </div>\
@@ -229,23 +256,47 @@ function activateContactInfo(id) {
             <a target="_blank" href="https://www.behance.net/albistudio">Behance</a>\
         </div>';
     } else {
+        // pseudo animation for middle tag
+        middleTag.classList.remove('right');
+        middleTag.classList.add('left');
+
+        // filling the content
         menuItem.innerHTML = '<div class="item flex">\
                 <img class="flag" src="images/mapple.jpg" alt="" class="mapple">\
                 <p class="city">toronto</p>\
             </div>\
-        <div class="adress">2nd Floor, 205<br>181 Carlaw Ave.<br>Toronto, ON<br>Canada</div>';
+        <div class="adress">2nd Floor, 205<br><a target="_blank" href="https://goo.gl/maps/kbfoaPWa4NVdRzxn8">181 Carlaw Ave.<br>Toronto, ON</a></div>';
     }
 }
 
+// Main function for menu elements
 function contactOptionSelect() {
-    tags.forEach(function (tag) {
-        tag.classList.remove('active');
-    });
-    this.classList.add('active');
-    // pass id into showing function
-    activateContactInfo(this.id);
+
+    // activate blob animation
+    contactSVG.classList.add('active');
+    // get clicked tag object
+    let tagObject = this;
+
+    // wait until blob animation is done
+    setTimeout(() => {
+
+        // run single menu item function
+        activateContactInfo(tagObject);
+
+        // clear active tags
+        tags.forEach(function (tag) {
+            tag.classList.remove('active');
+        });
+
+        // make clicked tag as active
+        tagObject.classList.add('active');
+
+        // activate default blob animation
+        contactSVG.classList.remove('active');
+    }, 300);
 }
 
+// Add event listener for crated content
 tags.forEach(function (tag) {
     tag.addEventListener('click', contactOptionSelect);
 });
