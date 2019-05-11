@@ -7,7 +7,11 @@ var observer = new MutationObserver(function (mutations) {
     mutations.forEach(function (mutation) {
         if (mutation.target.attributes['class'].value === 'rendered') {
             // later replace by annimation
-            document.getElementsByClassName('splash-module')[0].remove();
+            
+            document.getElementsByClassName('splash-module')[0].classList.add('disable');
+            setTimeout(() => {
+                document.getElementsByClassName('splash-module')[0].remove();
+            }, 300);
             document.getElementsByTagName('body')[0].style.overflow = 'auto';
             // stop observing
             observer.disconnect();
@@ -99,7 +103,7 @@ var lineBottomStylesDef = {
 }
 
 function hamburgerAnimation() {
-    
+
 
     if (menuButton.classList.contains('open') === true) {
         menuButton.classList.remove('open');
@@ -113,9 +117,7 @@ function hamburgerAnimation() {
         setStylesOnElement(lineTopStyles, lineTop);
         setStylesOnElement(lineMiddleStyles, lineMiddle);
         setStylesOnElement(lineBottomStyles, lineBottom);
-        
-        // hide contact module
-        deactivateContact();
+
     }
 }
 
@@ -130,14 +132,17 @@ const menuModule = document.getElementsByClassName('menu-module')[0];
 const body = document.getElementsByTagName('body')[0];
 
 
-function deactivateMenu() {
+function deactivateMenu(clickedMenuItem) {
     menuModule.innerHTML = '';
     // enable scrolling
     body.style.overflow = 'unset';
     // hide menu
     menuModule.classList.remove('active');
     hamburgerAnimation();
-
+    if (clickedMenuItem.id !== 'showContact') {
+        // hide contact module
+        deactivateContact();
+    }
 }
 
 
@@ -147,7 +152,7 @@ function chooseMenuListeners() {
     var chooseMenu = document.querySelectorAll('.js-choose-menu');
     chooseMenu.forEach(function (item) {
         item.addEventListener('click', function () {
-            deactivateMenu();
+            deactivateMenu(this);
         });
     });
 
@@ -157,7 +162,7 @@ function chooseMenuListeners() {
     // close menu module and get back home by clicking logo
     document.getElementById('menuLogo').addEventListener('click', function () {
         location.href = '#';
-        deactivateMenu();
+        deactivateMenu(this);
     });
 }
 
@@ -183,7 +188,7 @@ function activateMenu() {
 menuButton.addEventListener('click', function () {
 
     if (menuModule.classList.contains('active') === true) {
-        deactivateMenu();
+        deactivateMenu(this);
     } else {
         activateMenu();
     }
@@ -209,6 +214,7 @@ const contactSVG = document.querySelectorAll('.contact-menu svg')[0];
 
 
 function activateContact() {
+    location.hash = "contact";
     // disbale scrolling
     body.style.overflow = 'hidden';
     // show menu
@@ -222,7 +228,6 @@ function deactivateContact() {
     body.style.overflow = 'unset';
     // hide menu
     contactModule.classList.remove('active');
-
 }
 
 
@@ -305,10 +310,17 @@ tags.forEach(function (tag) {
 // work with us event listener
 document.getElementById('workWithUs').addEventListener('click', activateContact);
 
+const contactBlackOut = document.getElementById('js-contact-black');
 // close contact module and get back home by clicking logo
 document.getElementById('contactLogo').addEventListener('click', function () {
     location.href = '#';
-    deactivateContact();
+    contactBlackOut.classList.add('active');
+    setTimeout(() => {
+        deactivateContact();    
+    }, 300);
+    setTimeout(() => {
+        contactBlackOut.classList.remove('active');
+    }, 300);
 });
 
 /* Works with contacts module END */

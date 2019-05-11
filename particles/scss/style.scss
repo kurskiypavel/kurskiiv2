@@ -157,9 +157,6 @@ body {
     width: 17px;
 }
 
-
-
-
 .menu-module {
 
     position: fixed;
@@ -254,12 +251,30 @@ body {
     }
 }
 
-
 .rainbow {
     animation: rainbow 20s linear;
     animation-iteration-count: infinite;
     -webkit-animation: rainbow 20s linear infinite;
 
+}
+
+.contactBlack {
+    position: fixed;
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    top: 0;
+    width: 100%;
+    z-index: 127;
+    transition: 300ms;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active{
+        opacity: 1;
+        visibility: visible;
+    }
+    
 }
 
 @keyframes rainbow {
@@ -380,6 +395,20 @@ body {
     }
 }
 
+@keyframes splash-logo-animation {
+    0% {
+        fill: #16cbdb;
+    }
+
+    50% {
+        fill: #3c5c5f;
+    }
+
+    100% {
+        fill: #16cbdb;
+    }
+}
+
 .source-label.block--animate-reveal {
     // text-shadow: 2px 2px 3px #3a8289, -2px -2px 3px #3a8289;
     text-shadow: 4px 4px 10px rgba(255, 113, 67, 0.33), -4px -4px 10px rgba(255, 113, 67, 0.33), -4px 4px 10px rgba(255, 113, 67, 0.33), 4px -4px 10px rgba(255, 113, 67, 0.33);
@@ -388,7 +417,7 @@ body {
 .splash-module {
     position: fixed;
     height: 100vh;
-    background: #0F1B2A;
+
     z-index: 126;
     top: 0;
     width: 100%;
@@ -398,8 +427,57 @@ body {
         position: absolute;
         top: 50%;
         left: 50%;
+        z-index: 1;
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
+        transition: 0.3s;
+
+        .cls-4 {
+            -webkit-animation: splash-logo-animation 1.3s infinite;
+            /* Safari 4+ */
+            -moz-animation: splash-logo-animation 1.3s infinite;
+            /* Fx 5+ */
+            -o-animation: splash-logo-animation 1.3s infinite;
+            /* Opera 12+ */
+            animation: splash-logo-animation 1.3s infinite;
+            /* IE 10+, Fx 29+ */
+        }
+    }
+
+    .gate {
+        height: 100vh;
+        background: #0f1b2a;
+        top: 0;
+        width: 50%;
+        position: absolute;
+        transition: 400ms;
+
+        &.left {
+            left: 0;
+        }
+
+        &.right {
+            right: 0;
+        }
+    }
+
+    &.disable {
+        .logo {
+            opacity: 0;
+        }
+
+        .gate {
+            opacity: 0;
+
+            &.left {
+                transform: translateX(-100%);
+            }
+
+            &.right {
+                transform: translateX(100%);
+
+            }
+        }
     }
 }
 
