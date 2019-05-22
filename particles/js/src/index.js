@@ -7,7 +7,7 @@ var observer = new MutationObserver(function (mutations) {
     mutations.forEach(function (mutation) {
         if (mutation.target.attributes['class'].value === 'rendered') {
             // later replace by annimation
-            
+
             document.getElementsByClassName('splash-module')[0].classList.add('disable');
             setTimeout(() => {
                 document.getElementsByClassName('splash-module')[0].remove();
@@ -316,7 +316,7 @@ document.getElementById('contactLogo').addEventListener('click', function () {
     location.href = '#';
     contactBlackOut.classList.add('active');
     setTimeout(() => {
-        deactivateContact();    
+        deactivateContact();
     }, 300);
     setTimeout(() => {
         contactBlackOut.classList.remove('active');
@@ -405,4 +405,52 @@ posters.forEach(function (poster) {
     });
 });
 
-/*  Video play functionality BEGINS */
+/*  Video play functionality ENDS */
+
+/*  Lottie animation functionality BEGINS */
+
+// Getting json animation
+var animData = {
+    wrapper: document.getElementById('bodymovin'),
+    animType: 'html',
+    loop: true,
+    prerender: true,
+    autoplay: true,
+    path: '/static/json/team-animation.json'
+
+};
+// Start animation
+var anim = bodymovin.loadAnimation(animData);
+
+// Event listener settings to play on click
+// var svgAnimation = document.getElementById('bodymovin');
+// var paused = document.querySelector('.paused');
+// function actions() {
+//     svgAnimation.classList.add('paused');
+//     anim.pause();
+//     paused.addEventListener('click', function () {
+//         svgAnimation.classList.remove('paused');
+//         anim.play();
+//     });
+// }
+// svgAnimation.addEventListener('click', actions);
+
+// Show bodymoving on hover
+
+const bodymovinSelector = document.getElementById('bodymovin');
+
+
+bodymovinSelector.addEventListener('mouseover', function () {
+    setTimeout(function () {
+        document.querySelector('#bodymovin > div:nth-child(2)').style.opacity = 1;
+    }, 400);
+
+});
+bodymovinSelector.addEventListener('mouseleave', function () {
+    setTimeout(function () {
+        document.querySelector('#bodymovin > div:nth-child(2)').style.opacity = 0;
+    }, 400);
+});
+
+
+/*  Lottie animation functionality ENDS */
