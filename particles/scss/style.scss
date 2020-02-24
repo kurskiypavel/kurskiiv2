@@ -412,7 +412,7 @@ body {
 
 .source-label.block--animate-reveal {
     // text-shadow: 2px 2px 3px #3a8289, -2px -2px 3px #3a8289;
-    text-shadow: 4px 4px 10px rgba(255, 113, 67, 0.33), -4px -4px 10px rgba(255, 113, 67, 0.33), -4px 4px 10px rgba(255, 113, 67, 0.33), 4px -4px 10px rgba(255, 113, 67, 0.33);
+    text-shadow: 2px 2px 5px rgba(255, 113, 67, 0.33), -2px -2px 5px rgba(255, 113, 67, 0.33), -2px 2px 5px rgba(255, 113, 67, 0.33), 2px -2px 5px rgba(255, 113, 67, 0.33);
 }
 
 .splash-module {
@@ -451,7 +451,7 @@ body {
         top: 0;
         width: 50%;
         position: absolute;
-        transition: 400ms;
+        transition: 600ms;
 
         &.left {
             left: 0;
@@ -1268,7 +1268,7 @@ body {
 // HAMBURGER STYLES
 @media only screen and (min-width: 1024px) {
     .hamburger-container {
-        top: 50%;
+        top: 49%;
 
     }
 }

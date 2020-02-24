@@ -7,11 +7,13 @@ var observer = new MutationObserver(function (mutations) {
     mutations.forEach(function (mutation) {
         if (mutation.target.attributes['class'].value === 'rendered') {
             // later replace by annimation
-
-            document.getElementsByClassName('splash-module')[0].classList.add('disable');
+            setTimeout(() => {
+                document.getElementsByClassName('splash-module')[0].classList.add('disable');
+            }, 800);
+            
             setTimeout(() => {
                 document.getElementsByClassName('splash-module')[0].remove();
-            }, 300);
+            }, 900);
             document.getElementsByTagName('body')[0].style.overflow = 'auto';
             // stop observing
             observer.disconnect();
@@ -178,7 +180,7 @@ function activateMenu() {
     <a  id="showContact" class="js-choose-menu" ><div class="menu-item">Contact</div></a>\
     <a class="js-choose-menu" href="#clients"><div class="menu-item">Clients</div></a>\
     <a class="js-choose-menu" href="#"><div class="menu-item rainbow">The Cool Wall</div></a></div><div class="lets-build">\
-    <a href="mailto:newbusiness@albi.studio">Let\'s build something awesome together!</a></div> </div>';
+    <a href="mailto:newbusiness@studio">Let\'s build something awesome together!</a></div> </div>';
     chooseMenuListeners();
     hamburgerAnimation();
 
@@ -242,10 +244,10 @@ function activateContactInfo(tagObject) {
 
         // filling the content
         menuItem.innerHTML = '<div class="item">Get in touch: \
-            <a href="mailto:hello@albi.studio">hello@albi.studio</a>\
+            <a href="mailto:hello@studio">hello@studio</a>\
         </div>\
         <div class="item">Work with us: \
-            <a href="mailto:newbusiness@albi.studio">newbusiness@albi.studio</a>\
+            <a href="mailto:newbusiness@studio">newbusiness@studio</a>\
         </div>';
 
     } else if (id === 'internetTag') {
@@ -255,10 +257,10 @@ function activateContactInfo(tagObject) {
 
         // filling the content
         menuItem.innerHTML = '<div class="item">Reach Out On: \
-            <a target="_blank"  href="https://t.me/albistudio">Telegram</a>\
+            <a target="_blank"  href="https://t.me/studio">Telegram</a>\
         </div>\
         <div class="item">Follow On: \
-            <a target="_blank" href="https://www.behance.net/albistudio">Behance</a>\
+            <a target="_blank" href="https://www.behance.net/studio">Behance</a>\
         </div>';
     } else {
         // pseudo animation for middle tag
@@ -374,9 +376,9 @@ var showHelpBox = function (show) {
 };
 
 // show help box for first time
-if (!localStorage["albistudio.particles.helpShown"]) {
+if (!localStorage["studio.particles.helpShown"]) {
     helpBox.classList.remove("hidden");
-    localStorage["albistudio.particles.helpShown"] = true;
+    localStorage["studio.particles.helpShown"] = true;
 }
 
 
