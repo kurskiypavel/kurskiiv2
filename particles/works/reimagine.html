@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/flexiblegrid@v1.2.2/dist/css/flexible-grid.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        img {
+            max-width: 100%;
+        }
+
+        .logo {
+            max-height: 36px;
+            height: 36px;
+            margin: 40px 0;
+        }
+
+        .logo:hover {
+            cursor: pointer;
+        }
+
+        a {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .home {
+            max-width: 100px;
+        }
+
+        video {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .gif {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row d-flex flex-wrap">
+
+            <div class="column xs-12 sm-6 md-6">
+                <img class="logo" onclick="location.href='/'" src="../images/logo-black.png" alt="">
+            </div>
+            <div class="column xs-12sm-1 md-1 flex-ml-auto">
+                <div style="display: table-row;height: 116px;">
+                    <a href="/works.html"
+                        style="display: table-cell;vertical-align: middle;font-size: 1.3rem;">Works</a>
+                </div>
+            </div>
+        </div>
+
+        <video muted autoplay src="../static/images/projects/Reimagine/video.mp4"></video>
+        <img src="../static/images/projects/Reimagine/1.jpg" alt="">
+        <img class="gif" src="../static/images/projects/Reimagine/2.gif" alt="">
+        <img class="gif" src="../static/images/projects/Reimagine/3.gif" alt="">
+
+    </div>
+</body>
+
+</html>

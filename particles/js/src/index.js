@@ -179,8 +179,8 @@ function activateMenu() {
     <a class="js-choose-menu" href="#capabilities"><div class="menu-item">Capabilities</div></a>\
     <a  id="showContact" class="js-choose-menu" ><div class="menu-item">Contact</div></a>\
     <a class="js-choose-menu" href="#clients"><div class="menu-item">Clients</div></a>\
-    <a class="js-choose-menu" href="#"><div class="menu-item rainbow">The Cool Wall</div></a></div><div class="lets-build">\
-    <a href="mailto:newbusiness@studio">Let\'s build something awesome together!</a></div> </div>';
+    <a class="js-choose-menu" href="/works.html"><div class="menu-item rainbow">The Cool Wall</div></a></div><div class="lets-build">\
+    <a href="mailto:newbusiness@albistudio.com">Let\'s build something awesome together!</a></div> </div>';
     chooseMenuListeners();
     hamburgerAnimation();
 
@@ -244,10 +244,10 @@ function activateContactInfo(tagObject) {
 
         // filling the content
         menuItem.innerHTML = '<div class="item">Get in touch: \
-            <a href="mailto:hello@studio">hello@studio</a>\
+            <a href="mailto:hello@albistudio.com">hello@albistudio.com</a>\
         </div>\
         <div class="item">Work with us: \
-            <a href="mailto:newbusiness@studio">newbusiness@studio</a>\
+            <a href="mailto:newbusiness@albistudio.com">newbusiness@albistudio.com</a>\
         </div>';
 
     } else if (id === 'internetTag') {
